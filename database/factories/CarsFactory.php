@@ -18,12 +18,11 @@ class CarsFactory extends Factory
     public function definition(): array
     {
         $this->faker->addProvider(new \Faker\Provider\FakeCar($this->faker));
-
         return [
-            "name" => $this->faker->unique()->vehicleBrand,
-            "merk" => $this->faker->unique()->vehicleBrand,
-            "created_at" => $this->faker->dateTimeThisDecade("now", "Europe/Amsterdam"),
-            "updated_at" => $this->faker->dateTimeThisDecade("now", "Europe/Amsterdam")
+            "name" =>$this->faker->unique()->vehicleBrand,
+            "merk" =>$this->faker->unique()->vehicleBrand,
+            "created_at"=> $this->faker->dateTimeThisDecade("now","Europe/Amsterdam"),
+            "updated_at" => $this->faker->dateTimeThisDecade("now","Europe/Amsterdam")
         ];
     }
 }
